@@ -27,6 +27,21 @@ h1, h2, h3 {
     top: 0;
     z-index: 1000;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Black transparent background */
+    height: 60px; /* Slightly larger height for a balanced look */
+    border-radius: 20px; /* Rounded corners for glassmorphism */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
+    backdrop-filter: blur(15px); /* Glassmorphism effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    padding: 0 2rem; /* Horizontal padding for content spacing */
+}
+
 
 
 .navbar .logo img {
