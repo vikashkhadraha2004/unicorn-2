@@ -21,7 +21,7 @@ h1, h2, h3 {
     background: rgba(26, 115, 232, 0.6);
     height: 50px; /* Explicit height to make the navbar bigger */
     border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Darker shadow */
     backdrop-filter: blur(20px);
     position: sticky;
     top: 0;
