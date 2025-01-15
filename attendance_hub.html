@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Hub - Unicorn EduTech</title>
+  <link rel="stylesheet" href="attendance_style.css">
+</head>
+<body>
+  <!-- Spider Net Background -->
+  <div class="spider-net"></div>
+
+  <!-- Attendance Container -->
+  <div class="attendance-container">
+    <h1>Attendance Overview</h1>
+
+    <!-- Attendance Stats -->
+    <div class="attendance-stats">
+      <div class="stat-card">
+        <div class="stat-circle" data-percent="85">
+          <span>85%</span>
+        </div>
+        <p>Overall Attendance</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-circle" data-percent="90">
+          <span>90%</span>
+        </div>
+        <p>JavaScript Course</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-circle" data-percent="75">
+          <span>75%</span>
+        </div>
+        <p>Python Programming</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-circle" data-percent="95">
+          <span>95%</span>
+        </div>
+        <p>HTML & CSS Basics</p>
+      </div>
+    </div>
+
+    <!-- Detailed Attendance Table -->
+    <div class="attendance-table glass-card">
+      <h2>Attendance Details</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Course</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-01-15</td>
+            <td>JavaScript Course</td>
+            <td class="present">Present</td>
+          </tr>
+          <tr>
+            <td>2025-01-14</td>
+            <td>Python Programming</td>
+            <td class="absent">Absent</td>
+          </tr>
+          <tr>
+            <td>2025-01-13</td>
+            <td>HTML & CSS Basics</td>
+            <td class="present">Present</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Back to Dashboard Button -->
+    <div class="footer">
+      <button class="btn-glass" onclick="goToDashboard()">Back to Dashboard</button>
+    </div>
+  </div>
+
+  <script>
+    // Interactive Light Animation for Stat Circles
+    document.querySelectorAll('.stat-circle').forEach(circle => {
+      const percent = circle.getAttribute('data-percent');
+      circle.style.background = `conic-gradient(
+        #007BFF ${percent}%, 
+        rgba(255, 255, 255, 0.1) ${percent}%
+      )`;
+    });
+
+    function goToDashboard() {
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>

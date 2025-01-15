@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Unicorn EduTech</title>
+  <link rel="stylesheet" href="style_dash.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="C:\Users\Ayush\Downloads\Design-removebg-preview.png" alt="Unicorn EduTech" style="height: 50px;">
+      </div>
+      <ul class="nav-links">
+        <li><a href="profile_hub.html">Profile</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="#logout" class="btn-logout" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <!-- Profile Section -->
+    <section class="glass-card" id="profile">
+      <h2>Your Profile</h2>
+      <p>Username: <strong>GU_12345</strong></p>
+      <p>Email: <strong>user@example.com</strong></p>
+      <p>Attendance: <strong>85%</strong></p>
+      <button class="btn-primary" onclick="window.location.href='profile_hub.html'">View Full Profile</button>
+    </section>
+
+    <!-- Dashboard Overview -->
+    <section class="glass-card" id="dashboard">
+      <h2>Dashboard Overview</h2>
+      <p>Welcome to your personalized dashboard. Explore your progress, attendance, and more!</p>
+      <div class="progress-bar">
+        <p>Course Progress</p>
+        <div class="progress">
+          <div class="progress-fill" style="width: 60%;"></div>
+        </div>
+        <p>60% Completed</p>
+      </div>
+      <button class="btn-primary" onclick="window.location.href='dashboard_hub.html'">Go to Dashboard Hub</button>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="glass-card" id="courses">
+      <h2>Your Courses</h2>
+      <p>Currently registered for:</p>
+      <ul>
+        <li><a href="course_html.html">HTML & CSS Basics</a></li>
+        <li><a href="course_js.html">JavaScript for Beginners</a></li>
+        <li><a href="course_python.html">Python Programming</a></li>
+      </ul>
+      <button class="btn-primary" onclick="window.location.href='courses_hub.html'">Explore All Courses</button>
+    </section>
+
+    <!-- Video Lectures -->
+    <section class="glass-card" id="videos">
+      <h2>Video Lectures</h2>
+      <video controls width="100%">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Watch the latest lecture on JavaScript basics.</p>
+      <button class="btn-primary" onclick="window.location.href='https://youtu.be/yRpLlJmRo2w?si=-tOgxd0dLrdYBrd6'">View All Lectures</button>
+    </section>
+
+    <!-- Attendance Section -->
+    <section class="glass-card" id="attendance">
+      <h2>Attendance</h2>
+      <p>Keep track of your attendance to ensure success!</p>
+      <div class="attendance-bar">
+        <p>85% Attendance</p>
+        <div class="progress">
+          <div class="progress-fill" style="width: 85%;"></div>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="window.location.href='attendance_hub.html'">View Attendance Details</button>
+    </section>
+  </main>
+
+  <script>
+    function logout() {
+      alert('You have been logged out.');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

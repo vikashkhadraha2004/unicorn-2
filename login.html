@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Unicorn EduTech</title>
+  <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login to Unicorn EduTech</h1>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <div id="error-message" class="error-message"></div>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === 'GU_12345' && password === '12345') {
+        // Redirect to dashboard
+        window.location.href = 'dashboard.html';
+      } else {
+        document.getElementById('error-message').textContent = 'Invalid username or password. Please try again.';
+      }
+    });
+  </script>
+</body>
+</html>

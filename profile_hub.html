@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Unicorn EduTech</title>
+  <link rel="stylesheet" href="profile_style.css">
+</head>
+<body>
+  <!-- Spider Net Background -->
+  <div class="spider-net"></div>
+
+  <!-- Profile Container -->
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="light-ring">
+        <img src="C:\Users\Ayush\Desktop\john.jpeg" alt="Profile Image" class="profile-img">
+      </div>
+      <h1>Dr.(Prof) Anirban Sarkar </h1>
+      <p>Software Engineer | Lifelong Learner | Tech Enthusiast</p>
+    </div>
+
+    <div class="profile-details">
+      <h2>Personal Information</h2>
+      <ul>
+        <li><strong>Username:</strong> GU_12345</li>
+        <li><strong>Email:</strong> anirban.22scse1011737@galgotiasuniversity.edu.in</li>
+        <li><strong>Phone:</strong> 6291233588</li>
+        <li><strong>Address:</strong> Express Park View Nimbus 1 Greater Noida Uttar Pradesh</li>
+        <li><strong>Date of Birth:</strong> September 5, 2000</li>
+      </ul>
+
+      <h2>Professional Summary</h2>
+      <p>
+        Dr. Anirban is a software engineer with over 5 years of experience in full-stack development.
+        Passionate about creating user-friendly applications and learning new technologies. Avid
+        problem solver and mentor to aspiring developers.
+      </p>
+
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>React, Angular, Vue</li>
+        <li>Node.js, Express.js</li>
+        <li>Python, Django</li>
+        <li>Database Management (MySQL, MongoDB)</li>
+      </ul>
+
+      <h2>Achievements</h2>
+      <ul>
+        <li>Certified Full-Stack Developer</li>
+        <li>Top Scorer in Advanced JavaScript Course</li>
+        <li>Keynote Speaker at TechFest 2023</li>
+      </ul>
+    </div>
+
+    <div class="profile-footer">
+      <button class="btn-glass" onclick="editProfile()">Edit Profile</button>
+      <button class="btn-glass" onclick="viewProjects()">View Projects</button>
+      <button class="btn-glass" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    function editProfile() {
+      alert("Edit Profile functionality coming soon!");
+    }
+
+    function viewProjects() {
+      window.location.href = 'projects_hub.html';
+    }
+
+    function logout() {
+      alert('You have been logged out.');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>
