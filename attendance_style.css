@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Times New Roman', sans-serif;
-  background: url('file:///C:/Users/Ayush/Desktop/bgi.webp') no-repeat center center/cover;
+  background: url('bgi.webp') no-repeat center center/cover;
   color: #ffffff; /* Set font color to white */
   min-height: 100vh;
   overflow-x: hidden;
