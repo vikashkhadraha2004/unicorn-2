@@ -1,0 +1,174 @@
+/* General Styling with Background */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('file:///C:/Users/Ayush/Desktop/bgi.webp') no-repeat center center/cover;
+  color: #fff;
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+/* Spider Net Effect */
+.spider-net {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/hexellence.png') repeat;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+/* Glassmorphism Container */
+.profile-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile Header */
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-header .light-ring {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00aaff, #ff00ff);
+  animation: rotateRing 2s linear infinite;
+}
+
+.profile-header .profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/* Rotating Light Ring Animation */
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Profile Details */
+.profile-details h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.profile-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-details ul li {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.profile-details p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background: rgba(0, 123, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Buttons */
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-header .light-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-header .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-details ul li, .profile-details p {
+    font-size: 0.9rem;
+  }
+
+  .btn-glass {
+    font-size: 0.9rem;
+  }
+}

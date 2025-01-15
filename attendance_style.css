@@ -1,0 +1,185 @@
+/* General Styling with Background */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', sans-serif;
+  background: url('file:///C:/Users/Ayush/Desktop/bgi.webp') no-repeat center center/cover;
+  color: #ffffff; /* Set font color to white */
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Spider Net Effect */
+.spider-net {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/hexellence.png') repeat;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+/* Attendance Container */
+.attendance-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.attendance-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #007BFF, #FF00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ffffff; /* Fallback font color */
+}
+
+/* Attendance Stats */
+.attendance-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.stat-card {
+  text-align: center;
+  position: relative;
+  perspective: 800px; /* 3D Perspective */
+}
+
+.stat-circle {
+  width: 120px;
+  height: 120px;
+  background: conic-gradient(#007BFF 85%, rgba(255, 255, 255, 0.1) 85%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ffffff; /* Font color white */
+  margin: 0 auto 10px auto;
+  box-shadow: 0 0 10px #007BFF, 0 0 20px #007BFF;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  animation: rotateRing 4s linear infinite; /* Rotating Effect */
+  cursor: pointer;
+}
+
+/* Rotating Animation */
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover and Active Effects */
+.stat-circle:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 0 20px #007BFF, 0 0 40px #007BFF;
+}
+
+.stat-circle:active {
+  transform: scale(2) rotateY(180deg) rotateX(30deg); /* 3D Flip on Click */
+  box-shadow: 0 0 50px #007BFF, 0 0 100px #FF00FF;
+}
+
+/* Attendance Table */
+.attendance-table {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.attendance-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  text-align: center;
+  color: #ffffff; /* Font color white */
+}
+
+.attendance-table th {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.attendance-table td.present {
+  color: #4caf50;
+}
+
+.attendance-table td.absent {
+  color: #f44336;
+}
+
+/* Back Button */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff; /* Font color white */
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .attendance-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-circle {
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+  }
+}
