@@ -1,0 +1,753 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+     background: url('file:///C:/Users/Ayush/Desktop/bgi.webp');
+    color: #202124;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 115, 232, 0.6);
+    height: 50px; /* Explicit height to make the navbar bigger */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.navbar .logo img {
+    height: 160px;
+    width: 125px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d2e3fc;
+}
+
+.nav-links .btn {
+    background: linear-gradient(135deg, #34a853, #0b6623);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 500;
+    transition: background 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links .btn:hover {
+    background: #2b7a3d;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    max-width: 400px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    background: transparent;
+    color: #202124;
+}
+
+.search-bar input::placeholder {
+    color: #666;
+}
+
+.search-bar button {
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #0c5ac7;
+}
+
+.suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestions div {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.suggestions div:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.suggestions .no-result {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: rgba(26, 115, 232, 0.6);
+    color: #fff;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.hero button {
+    background: linear-gradient(135deg, #34a853, #0b6623);
+    border: none;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    background: #2b7a3d;
+}
+
+/* Courses Section */
+.courses {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.courses h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+.course-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course {
+    flex: 1 1 calc(25% - 2rem);
+    background: rgba(26, 115, 232, 0.8);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin: 2rem 0;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #202124;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1a73e8;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    flex: 1 1 calc(30% - 1rem);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(26, 115, 232, 0.8);
+    color: #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d2e3fc;
+}
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+.contact p {
+    font-size: 1.25rem;
+    color: #5f6368;
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+#contact-form label {
+    font-size: 1rem;
+    color: #202124;
+    text-align: left;
+    font-weight: 500;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: #202124;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #666;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.3);
+}
+
+#contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+#contact-form button {
+    background: linear-gradient(135deg, #1a73e8, #4285f4);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+#contact-form button:hover {
+    transform: scale(1.05);
+    background: #174ea6;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    .contact {
+        padding: 2rem 1rem;
+    }
+
+    #contact-form {
+        padding: 1.5rem;
+    }
+
+    #contact-form button {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+/* Testimonials Section */
+.testimonials {
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin: 2rem;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #202124;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    flex: 1 1 calc(30% - 1rem);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.slider-nav {
+    margin-top: 2rem;
+}
+
+.slider-nav button {
+    background: rgba(26, 115, 232, 0.8);
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-nav button:hover {
+    background: #1a73e8;
+    transform: scale(1.1);
+}
+
+.slider-nav button:disabled {
+    background: rgba(26, 115, 232, 0.5);
+    cursor: not-allowed;
+}
+/* Features Section */
+.features {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: #1a73e8;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature {
+    flex: 1 1 calc(33.33% - 2rem);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #1a73e8;
+    margin-bottom: 1rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.feature:hover i {
+    transform: scale(1.2);
+    color: #4285f4;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #202124;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.feature button {
+    background: linear-gradient(135deg, #1a73e8, #4285f4);
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.feature button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0c5ac7, #1a73e8);
+}
+/* Popular Courses Section */
+.courses {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem;
+}
+
+.courses h2 {
+    font-size: 2.5rem;
+    color: #1a73e8;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.course {
+    flex: 1 1 calc(25% - 2rem);
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.course h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #202124;
+    margin-bottom: 1rem;
+}
+
+.course p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.course button {
+    background: linear-gradient(135deg, #1a73e8, #4285f4);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.course button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0c5ac7, #1a73e8);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(128, 128, 128, 0.6); /* Grey transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border-radius: 10px; /* Slight rounding of edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.navbar .logo img {
+    height: 50px;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff; /* White text for contrast */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #d2e3fc; /* Light blue for hover effect */
+}
+8footer {
+    background: rgba(26, 26, 26, 0.9); /* Dark background */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-content strong {
+    font-weight: 600;
+    color: #1a73e8; /* Highlight color */
+}
+
+.footer-content a {
+    color: #fffae4; /* Email link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #4285f4;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #1a73e8; /* Highlight on hover */
+}
